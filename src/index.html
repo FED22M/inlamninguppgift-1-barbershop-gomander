@@ -6,6 +6,8 @@
 
     <title>Barbershop</title>
 
+    <script src="script.js"></script>
+
     <link rel="stylesheet" href="style.css"/>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Poppins"/>
@@ -20,7 +22,11 @@
           <h1>Barbershop</h1>
 
           <nav>
-            <ul class="nav-list">
+            <button type="button" onclick="toggleMenu()" class="menu-button">
+              Menu
+            </button>
+
+            <ul id="nav-list" class="nav-list">
               <li>
                 <a href="">
                   Home
@@ -282,7 +288,7 @@
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
+                  <i class="fa-regular fa-star-half-stroke"></i>
                 </div>
 
                 <div class="customer-name">
