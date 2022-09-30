@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Poppins:wght@300&display=swap');
 
-:root {
-  --gold: rgb(191, 146, 91);
-  --gold-low-alpha: rgba(191, 146, 91, 0.7);
-  --gold-alt: #b78649;
-  --gold-alt-low-alpha: rgba(183, 134, 73, 0.3);
-  --black: rgb(20, 27, 37);
-  --black-low-alpha: rgba(20, 27, 37, 0.3);
-  --beige: rgb(235, 232, 222);
-  --white-low-alpha: rgba(255, 255, 255, 0.1);
-}
+
+$gold: rgb(191, 146, 91);
+$gold-low-alpha: rgba(191, 146, 91, 0.7);
+$gold-alt: #b78649;
+$gold-alt-low-alpha: rgba(183, 134, 73, 0.3);
+$black: rgb(20, 27, 37);
+$black-low-alpha: rgba(20, 27, 37, 0.3);
+$beige: rgb(235, 232, 222);
+$white-low-alpha: rgba(255, 255, 255, 0.1);
 
 *, *::before {
   box-sizing: border-box;
@@ -18,7 +17,7 @@
 body {
   margin: 0;
   color: #fff;
-  background-color: var(--black);
+  background-color: $black;
   font-family: Poppins, sans-serif;
 }
 
@@ -69,7 +68,7 @@ a {
   position: fixed;
   width: 100%;
   padding-bottom: 0.2rem;
-  background-color: var(--black-low-alpha);
+  background-color: $black-low-alpha;
   z-index: 10000;
 }
 
@@ -88,7 +87,7 @@ a {
   align-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background: var(--gold-alt-low-alpha);
+  background: $gold-alt-low-alpha;
 }
 
 .nav-bar-top-left {
@@ -115,10 +114,10 @@ a {
   padding: 0.8rem;
   text-decoration: none;
   transition: 0.3s;
-}
 
-.nav-list a:hover {
-  background-color: var(--white-low-alpha);
+  &:hover {
+    background-color: $white-low-alpha;
+  }
 }
 
 .banner-text {
@@ -127,17 +126,17 @@ a {
   align-self: center;
   max-width: 30rem;
   margin: 2rem;
+
+  h3 {
+    margin: 0;
+    font-size: 3rem;
+  }
 }
 
 .banner-text > h2, .about-text > h2, .reviews > h2 {
   margin: 0;
-  color: var(--gold);
+  color: $gold;
   font-size: 1rem;
-}
-
-.banner-text > h3 {
-  margin: 0;
-  font-size: 3rem;
 }
 
 .outline {
@@ -150,25 +149,25 @@ a {
   margin-top: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
-}
 
-.banner-sub-text > p {
-  margin: 0 0 3rem;
+  p {
+    margin: 0 0 3rem;
+  }
 }
 
 .banner-button {
   padding: 1rem;
-  color: var(--gold);
-  border: 2px solid var(--gold);
+  color: $gold;
+  border: 2px solid $gold;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s;
-}
 
-.banner-button:hover {
-  background-color: var(--white-low-alpha);
+  &:hover {
+    background-color: $white-low-alpha;
+  }
 }
 
 .services-card {
@@ -177,12 +176,12 @@ a {
   flex-direction: column;
   text-align: center;
   padding: 2rem;
-  background-color: var(--gold);
+  background-color: $gold;
   font-size: 1.25rem;
-}
 
-.services-card:nth-child(2n) {
-  background-color: var(--gold-alt);
+  &:nth-child(2n) {
+    background-color: $gold-alt;
+  }
 }
 
 .services-image {
@@ -234,11 +233,11 @@ img {
 
   .nav-list {
     display: flex;
-  }
 
-  .nav-list > li {
-    display: inline-block;
-    color: #ddd;
+    li {
+      display: inline-block;
+      color: #ddd;
+    }
   }
   
   .banner-text {
@@ -250,7 +249,7 @@ img {
 
   .banner-sub-text {
     padding: 0 0 1rem 3rem;
-    border-left: 2px solid var(--gold);
+    border-left: 2px solid $gold;
   }
 
   .services {
@@ -263,7 +262,7 @@ img {
     align-items: center;
     gap: 3rem;
     height: 500px;
-    color: var(--black);
+    color: $black;
     background-color: #efefef;
     overflow: hidden;
   }
@@ -284,7 +283,7 @@ img {
     padding: 1rem;
     width: 20rem;
     color: #fff;
-    background-color: var(--gold);
+    background-color: $gold;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 3px;
@@ -303,16 +302,16 @@ img {
     flex-direction: column;
     align-items: center;
     padding: 3rem;
-    color: var(--black);
-    background-color: var(--beige);
-  }
+    color: $black;
+    background-color: $beige;
 
-  .reviews-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-    margin-top: 3rem;
+    &-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      margin-top: 3rem;
+    }
   }
 
   .review-card {
@@ -321,16 +320,16 @@ img {
     padding: 1rem;
     background-color: #fff;
     border-radius: 5px;
+
+    p {
+      max-width: 20rem;
+    }
   }
 
   .quote-icon {
     position: absolute;
     top: -1.25rem;
     color: #fff;
-  }
-
-  .review-card > p {
-    max-width: 20rem;
   }
 
   .customer-container {
@@ -355,7 +354,7 @@ img {
   }
 
   .stars {
-    color: var(--gold);
+    color: $gold;
     font-size: 0.8rem;
   }
 
@@ -364,7 +363,7 @@ img {
   }
 
   .customer-text {
-    color: var(--gold);
+    color: $gold;
     font-size: 0.8rem;
     text-transform: uppercase;
   }
@@ -373,23 +372,23 @@ img {
     display: flex;
     gap: 2rem;
     padding: 3rem 15%;
-    background-color: var(--black);
+    background-color: $black;
     font-size: 1.1rem;
-  }
 
-  .footer-section {
-    flex: 1;
-    color: #fff;
-  }
+    &-section {
+      flex: 1;
+      color: #fff;
 
-  .footer-section > .footer-ul {
-    margin-left: 1.75rem;
-  }
+      &-title {
+        margin-top: 0;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+      }
+    }
 
-  .footer-section-title {
-    margin-top: 0;
-    font-size: 1.8rem;
-    text-transform: uppercase;
+    &-ul {
+      margin-left: 1.75rem;
+    }
   }
 
   .social-buttons {
@@ -403,6 +402,6 @@ img {
     padding-top: 0.4rem;
     text-align: center;
     border-radius: 50%;
-    background-color: var(--gold);
+    background-color: $gold;
   }
 }
