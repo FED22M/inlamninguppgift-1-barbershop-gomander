@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Poppins:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Poppins:wght@300&display=swap");
 :root {
   --gold: rgb(191, 146, 91);
   --gold-low-alpha: rgba(191, 146, 91, 0.7);
@@ -31,7 +30,7 @@ h1 {
 
 h2, h3, .nav-bar {
   margin: 0;
-  font-family: 'Barlow Semi Condensed';
+  font-family: "Barlow Semi Condensed";
   text-transform: uppercase;
 }
 
@@ -44,13 +43,13 @@ header {
 }
 
 header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./images/nathon-oski-EW_rqoSdDes-unsplash.jpg');
+  background-image: url("../images/nathon-oski-EW_rqoSdDes-unsplash.jpg");
   background-position: center;
   background-size: cover;
   opacity: 30%;
@@ -188,7 +187,7 @@ a {
 .services-image {
   position: absolute;
   top: -100px;
-  left: calc(100% / 2 - 100px);
+  left: calc(50% - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,44 +218,35 @@ img {
     flex-direction: row;
     justify-content: space-evenly;
   }
-
   .nav-bar-top-left {
     width: unset;
   }
-
   .menu-button {
     display: none;
   }
-
   #nav {
     display: unset;
   }
-
   .nav-list {
     display: flex;
   }
-
   .nav-list > li {
     display: inline-block;
     color: #ddd;
   }
-  
   .banner-text {
     position: absolute;
     top: 160px;
     left: 50%;
     width: 30rem;
   }
-
   .banner-sub-text {
     padding: 0 0 1rem 3rem;
     border-left: 2px solid var(--gold);
   }
-
   .services {
     display: flex;
   }
-
   .about-us {
     display: flex;
     justify-content: center;
@@ -267,17 +257,14 @@ img {
     background-color: #efefef;
     overflow: hidden;
   }
-
   .about-text {
     width: 30rem;
   }
-
   .about-text > h3, .reviews > h3 {
     margin: 0;
     font-size: 2rem;
     text-transform: uppercase;
   }
-
   .experience-container {
     display: flex;
     gap: 1rem;
@@ -289,15 +276,12 @@ img {
     text-transform: uppercase;
     border-radius: 3px;
   }
-
   .experience-icon {
     font-size: 3rem;
   }
-
   .experience-years {
     font-size: 2rem;
   }
-
   .reviews {
     display: flex;
     flex-direction: column;
@@ -306,7 +290,6 @@ img {
     color: var(--black);
     background-color: var(--beige);
   }
-
   .reviews-container {
     display: flex;
     justify-content: center;
@@ -314,7 +297,6 @@ img {
     width: 100%;
     margin-top: 3rem;
   }
-
   .review-card {
     position: relative;
     width: 25%;
@@ -322,22 +304,18 @@ img {
     background-color: #fff;
     border-radius: 5px;
   }
-
   .quote-icon {
     position: absolute;
     top: -1.25rem;
     color: #fff;
   }
-
   .review-card > p {
     max-width: 20rem;
   }
-
   .customer-container {
     display: flex;
     gap: 1rem;
   }
-
   .customer-picture {
     display: flex;
     justify-content: center;
@@ -347,28 +325,23 @@ img {
     border-radius: 50%;
     overflow: hidden;
   }
-
   .customer-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
   .stars {
     color: var(--gold);
     font-size: 0.8rem;
   }
-
   .customer-name {
     font-size: 1.1rem;
   }
-
   .customer-text {
     color: var(--gold);
     font-size: 0.8rem;
     text-transform: uppercase;
   }
-
   footer {
     display: flex;
     gap: 2rem;
@@ -376,27 +349,22 @@ img {
     background-color: var(--black);
     font-size: 1.1rem;
   }
-
   .footer-section {
     flex: 1;
     color: #fff;
   }
-
   .footer-section > .footer-ul {
     margin-left: 1.75rem;
   }
-
   .footer-section-title {
     margin-top: 0;
     font-size: 1.8rem;
     text-transform: uppercase;
   }
-
   .social-buttons {
     display: flex;
     gap: 1rem;
   }
-
   .social-buttons > a, .quote-icon {
     width: 2.5rem;
     height: 2.5rem;
