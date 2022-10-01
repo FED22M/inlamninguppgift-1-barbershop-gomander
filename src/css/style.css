@@ -17,7 +17,7 @@ h1 {
   font-size: 1.6rem;
 }
 
-h2, h3, .nav-bar {
+h2, h3, .nav-bar, .experience {
   margin: 0;
   font-family: "Barlow Semi Condensed";
   text-transform: uppercase;
@@ -110,7 +110,7 @@ a {
 
 .banner-text {
   position: relative;
-  top: 160px;
+  top: 10%;
   align-self: center;
   max-width: 30rem;
   margin: 2rem;
@@ -120,7 +120,7 @@ a {
   font-size: 3rem;
 }
 
-.banner-text > h2, .about-text > h2, .reviews > h2 {
+h2 {
   margin: 0;
   color: rgb(191, 146, 91);
   font-size: 1rem;
@@ -167,7 +167,6 @@ a {
 .services-card:nth-child(2n) {
   background-color: #b78649;
 }
-
 .services-image {
   position: absolute;
   top: -100px;
@@ -181,15 +180,150 @@ a {
   border-radius: 50%;
   overflow: hidden;
 }
-
 .services-title {
   margin-top: 100px;
   font-weight: 600;
   text-transform: uppercase;
 }
-
 .services-text {
   margin-bottom: 100px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0.5rem;
+  color: rgb(20, 27, 37);
+  background-color: #efefef;
+}
+
+.about-text > h3, .reviews > h3 {
+  margin: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.experience {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  width: 20rem;
+  color: #fff;
+  background-color: rgb(191, 146, 91);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.experience-icon {
+  font-size: 3rem;
+}
+.experience-years {
+  font-size: 2rem;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  color: rgb(20, 27, 37);
+  background-color: rgb(235, 232, 222);
+}
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.review-card {
+  position: relative;
+  width: 25%;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.review-card p {
+  max-width: 20rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -1.25rem;
+  color: #fff;
+}
+
+.customer-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.customer-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars {
+  color: rgb(191, 146, 91);
+  font-size: 0.8rem;
+}
+
+.customer-name {
+  font-size: 1.1rem;
+}
+
+.customer-text {
+  color: rgb(191, 146, 91);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-buttons > a, .quote-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-top: 0.4rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgb(191, 146, 91);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 15%;
+  background-color: rgb(20, 27, 37);
+  font-size: 1.1rem;
+}
+.footer-section {
+  flex: 1;
+  color: #fff;
+}
+.footer-section-title {
+  margin-top: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.footer-ul {
+  margin-left: 1.5rem;
 }
 
 img {
@@ -231,130 +365,17 @@ img {
   .services {
     display: flex;
   }
-  .about-us {
-    display: flex;
+  .about {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
     height: 500px;
-    color: rgb(20, 27, 37);
-    background-color: #efefef;
     overflow: hidden;
   }
   .about-text {
     width: 30rem;
   }
-  .about-text > h3, .reviews > h3 {
-    margin: 0;
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
-  .experience-container {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    width: 20rem;
-    color: #fff;
-    background-color: rgb(191, 146, 91);
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 3px;
-  }
-  .experience-icon {
-    font-size: 3rem;
-  }
-  .experience-years {
-    font-size: 2rem;
-  }
-  .reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem;
-    color: rgb(20, 27, 37);
-    background-color: rgb(235, 232, 222);
-  }
-  .reviews-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
-    margin-top: 3rem;
-  }
-  .review-card {
-    position: relative;
-    width: 25%;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-  .review-card p {
-    max-width: 20rem;
-  }
-  .quote-icon {
-    position: absolute;
-    top: -1.25rem;
-    color: #fff;
-  }
-  .customer-container {
-    display: flex;
-    gap: 1rem;
-  }
-  .customer-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  .customer-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .stars {
-    color: rgb(191, 146, 91);
-    font-size: 0.8rem;
-  }
-  .customer-name {
-    font-size: 1.1rem;
-  }
-  .customer-text {
-    color: rgb(191, 146, 91);
-    font-size: 0.8rem;
-    text-transform: uppercase;
-  }
-  footer {
-    display: flex;
-    gap: 2rem;
-    padding: 3rem 15%;
-    background-color: rgb(20, 27, 37);
-    font-size: 1.1rem;
-  }
-  footer-section {
-    flex: 1;
-    color: #fff;
-  }
-  footer-section-title {
-    margin-top: 0;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-  }
-  footer-ul {
-    margin-left: 1.75rem;
-  }
-  .social-buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  .social-buttons > a, .quote-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding-top: 0.4rem;
-    text-align: center;
-    border-radius: 50%;
-    background-color: rgb(191, 146, 91);
+  .footer {
+    flex-direction: row;
   }
 }
