@@ -23,15 +23,14 @@ h2, h3, .nav-bar, .experience {
   text-transform: uppercase;
 }
 
-header {
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 700px;
   font-size: 0.8rem;
 }
-
-header::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -43,7 +42,6 @@ header::before {
   background-size: cover;
   opacity: 30%;
 }
-
 .header-content {
   position: relative;
 }
@@ -97,7 +95,6 @@ a {
   font-weight: 700;
   list-style-type: none;
 }
-
 .nav-list a {
   display: inline-block;
   padding: 0.8rem;
@@ -197,6 +194,9 @@ h2 {
   color: rgb(20, 27, 37);
   background-color: #efefef;
 }
+.about-image {
+  align-self: center;
+}
 
 .about-text > h3, .reviews > h3 {
   margin: 0;
@@ -229,18 +229,23 @@ h2 {
   padding: 3rem;
   color: rgb(20, 27, 37);
   background-color: rgb(235, 232, 222);
+  overflow: hidden;
 }
 .reviews-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2rem;
   width: 100%;
   margin-top: 3rem;
 }
+.reviews-carousel-buttons {
+  padding-top: 1rem;
+}
 
 .review-card {
   position: relative;
-  width: 25%;
+  min-width: 300px;
+  max-width: 400px;
   padding: 1rem;
   background-color: #fff;
   border-radius: 5px;
@@ -255,11 +260,10 @@ h2 {
   color: #fff;
 }
 
-.customer-container {
+.customer {
   display: flex;
   gap: 1rem;
 }
-
 .customer-picture {
   display: flex;
   justify-content: center;
@@ -269,26 +273,23 @@ h2 {
   border-radius: 50%;
   overflow: hidden;
 }
-
 .customer-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.stars {
-  color: rgb(191, 146, 91);
-  font-size: 0.8rem;
-}
-
 .customer-name {
   font-size: 1.1rem;
 }
-
 .customer-text {
   color: rgb(191, 146, 91);
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+.stars {
+  color: rgb(191, 146, 91);
+  font-size: 0.8rem;
 }
 
 .social-buttons {
@@ -309,8 +310,8 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 15%;
-  background-color: rgb(20, 27, 37);
+  padding: 3rem 0.8rem;
+  background-color: #000;
   font-size: 1.1rem;
 }
 .footer-section {
@@ -324,6 +325,7 @@ h2 {
 }
 .footer-ul {
   margin-left: 1.5rem;
+  color: #ddd;
 }
 
 img {
@@ -375,7 +377,14 @@ img {
   .about-text {
     width: 30rem;
   }
+  .reviews-container {
+    justify-content: center;
+  }
+  .reviews-carousel-buttons {
+    display: none;
+  }
   .footer {
     flex-direction: row;
+    padding: 3rem 15%;
   }
 }

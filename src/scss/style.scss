@@ -33,29 +33,29 @@ h2, h3, .nav-bar, .experience {
   text-transform: uppercase;
 }
 
-header {
+.header {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 700px;
   font-size: 0.8rem;
-}
 
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('../images/nathon-oski-EW_rqoSdDes-unsplash.jpg');
-  background-position: center;
-  background-size: cover;
-  opacity: 30%;
-}
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/nathon-oski-EW_rqoSdDes-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity: 30%;
+  }
 
-.header-content {
-  position: relative;
+  &-content {
+    position: relative;
+  }
 }
 
 a {
@@ -106,16 +106,16 @@ a {
   font-size: 1rem;
   font-weight: 700;
   list-style-type: none;
-}
 
-.nav-list a {
-  display: inline-block;
-  padding: 0.8rem;
-  text-decoration: none;
-  transition: 0.3s;
-
-  &:hover {
-    background-color: $white-low-alpha;
+  a {
+    display: inline-block;
+    padding: 0.8rem;
+    text-decoration: none;
+    transition: 0.3s;
+  
+    &:hover {
+      background-color: $white-low-alpha;
+    }
   }
 }
 
@@ -216,6 +216,10 @@ h2 {
   padding: 0.5rem;
   color: $black;
   background-color: #efefef;
+
+  &-image {
+    align-self: center;
+  }
 }
 
 .about-text > h3, .reviews > h3 {
@@ -251,19 +255,25 @@ h2 {
   padding: 3rem;
   color: $black;
   background-color: $beige;
+  overflow: hidden;
 
   &-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem;
     width: 100%;
     margin-top: 3rem;
+  }
+
+  &-carousel-buttons {
+    padding-top: 1rem;
   }
 }
 
 .review-card {
   position: relative;
-  width: 25%;
+  min-width: 300px;
+  max-width: 400px;
   padding: 1rem;
   background-color: #fff;
   border-radius: 5px;
@@ -279,40 +289,40 @@ h2 {
   color: #fff;
 }
 
-.customer-container {
+.customer {
   display: flex;
   gap: 1rem;
-}
 
-.customer-picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-}
+  &-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
-.customer-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-name {
+    font-size: 1.1rem;
+  }
+
+  &-text {
+    color: $gold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
 }
 
 .stars {
   color: $gold;
   font-size: 0.8rem;
-}
-
-.customer-name {
-  font-size: 1.1rem;
-}
-
-.customer-text {
-  color: $gold;
-  font-size: 0.8rem;
-  text-transform: uppercase;
 }
 
 .social-buttons {
@@ -333,8 +343,8 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 15%;
-  background-color: $black;
+  padding: 3rem 0.8rem;
+  background-color: #000;
   font-size: 1.1rem;
 
   &-section {
@@ -350,6 +360,7 @@ h2 {
 
   &-ul {
     margin-left: 1.5rem;
+    color: #ddd;
   }
 }
 
@@ -413,7 +424,16 @@ img {
     }
   }
 
+  .reviews-container {
+    justify-content: center;
+  }
+
+  .reviews-carousel-buttons {
+    display: none;
+  }
+
   .footer {
     flex-direction: row;
+    padding: 3rem 15%;
   }
 }
