@@ -22,12 +22,13 @@ body {
 
 h1 {
   display: inline;
-  margin: 0;
+  margin: 0.5rem 0;
   color: #fff;
   font-size: 1.6rem;
 }
 
 h2, h3, .nav-bar, .experience {
+  line-height: 100%;
   margin: 0;
   font-family: 'Barlow Semi Condensed';
   text-transform: uppercase;
@@ -241,6 +242,12 @@ h2 {
 
   &-icon {
     font-size: 3rem;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &-years {
